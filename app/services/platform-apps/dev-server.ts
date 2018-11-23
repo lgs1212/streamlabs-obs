@@ -11,8 +11,8 @@ export class DevServer {
   listen() {
     this.server = http.createServer((request, response) =>
       handler(request, response, {
-        public: this.directory
-      })
+        public: this.directory,
+      }),
     );
 
     this.server.listen(this.port);
